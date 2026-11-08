@@ -2,13 +2,21 @@
 
 Berkas ini adalah instruksi untuk agent AI (Hermes Agent dan OpenCode) yang bekerja di repo ini. Baca seluruhnya sebelum melakukan apa pun, dan ikuti setiap kali ada sesi baru.
 
+Bila aturan di berkas ini bertentangan dengan `AGENTS.md` lain di folder induk (misalnya folder home), aturan di berkas ini yang dipakai untuk pekerjaan di dalam repo ini. Itu berlaku juga untuk kebiasaan bertanya "mode" sebelum mengerjakan tugas: di repo ini jangan bertanya mode, ikuti alur di bagian 3.
+
 ## 1. Konteks
 
 Pemilik repo adalah Naufal Ilham Fauzan, mahasiswa S1 Pendidikan Multimedia UPI semester 3. Ia membuat satu projek kecil setiap hari untuk dua tujuan: melatih kemampuannya menulis spesifikasi dan mereview hasil agent, serta mengumpulkan karya untuk web portofolio.
 
 Kemampuan Python Naufal ada di level dasar sampai menengah. Ia ingin memahami kode yang kamu tulis, bukan hanya menerima hasilnya. Ia berkomunikasi dalam bahasa Indonesia, jadi semua penjelasan, komentar kode, dan dokumentasi ditulis dalam bahasa Indonesia.
 
-Lingkungan Naufal: Windows 11 (64-bit). Gunakan perintah yang berjalan di Windows (PowerShell atau `python` biasa), bukan perintah khusus Linux, kecuali ia meminta lain.
+Lingkungan Naufal: Windows 11 (64-bit). Terminal agent mungkin berupa bash (git-bash), tetapi Naufal menjalankan hasilnya di PowerShell. Karena itu:
+
+- Tulis perintah di `README.md` untuk PowerShell (contoh: `python main.py`, path memakai backslash).
+- Hindari perintah khusus Linux di dalam kode dan dokumentasi.
+- Bila hasil uji di terminalmu bisa berbeda dari PowerShell (misalnya encoding konsol), catat perbedaannya di laporan.
+
+Memulai sesi: sesi Hermes sebaiknya dijalankan dari folder repo supaya berkas ini terbaca otomatis. Bila sesi tidak dimulai dari folder repo, Naufal akan membuka dengan perintah "baca AGENTS.md di repo oneday-oneproject".
 
 ## 2. Struktur repo
 
@@ -23,9 +31,11 @@ oneday-oneproject/
     (kode projek)
 ```
 
+Di akar repo juga ada `.gitattributes` berisi `* text=auto` agar akhir baris (LF dan CRLF) konsisten di Windows.
+
 - Setiap projek punya satu folder bernama `NNN_nama-projek`. `NNN` adalah nomor urut tiga digit yang melanjutkan nomor terakhir, dan nama memakai huruf kecil dengan tanda hubung.
 - Seluruh pekerjaan satu projek tinggal di dalam foldernya. Jangan mengubah folder projek lain.
-- `IDE.md` adalah bank ide milik Naufal. Jangan mengubahnya kecuali ia meminta.
+- `IDE.md` adalah bank ide milik Naufal. Naufal yang memilih ide harian dan menandai ide yang sudah dipakai (contoh: `(dipakai: 003)`). Jangan mengubah `IDE.md`. Bila ia meminta usulan ide, tulis usulannya di chat saja, dan ikuti aturan ukuran ide: bisa dijelaskan dalam satu kalimat dan punya kriteria selesai yang bisa dicek.
 
 ## 3. Alur kerja harian
 
@@ -61,7 +71,10 @@ Satu projek berjalan dalam empat tahap. Jangan melompati tahap.
 
 ### Batasan tindakan
 
-- Membuat commit lokal boleh, dengan pesan berbahasa Indonesia yang menyebut nomor dan nama projek (contoh: `001 kalkulator-ipk: selesai sesuai SPEC`).
+- Kamu yang membuat commit lokal, satu commit per projek, setelah Naufal menyatakan review selesai dan `README.md` sudah ditulis. Pesan commit berbahasa Indonesia dan menyebut nomor serta nama projek:
+  - Projek lolos: `001 kalkulator-ipk: selesai sesuai SPEC`
+  - Projek tidak lolos: `001 kalkulator-ipk: belum selesai, lihat REVIEW.md`
+- Projek yang tidak lolos tetap di-commit, tetapi tidak dibuatkan entri kartu portofolio.
 - Jangan melakukan `git push`, menghapus folder atau file di luar folder projek, atau mengubah repo lain tanpa perintah eksplisit dari Naufal.
 - Jangan memasang dependensi global atau mengubah pengaturan sistem tanpa bertanya.
 
@@ -94,7 +107,7 @@ Jika projek lolos review (semua kriteria selesai terpenuhi), tampilkan di chat s
 }
 ```
 
-Aturan isian: `id` sama dengan nomor projek tanpa nol di depan, `tag` hanya `python` atau `web`, `date` berformat `YYYY-MM-DD`, dan `description` paling banyak dua kalimat tanpa kata superlatif.
+Aturan isian: `id` sama dengan nomor projek tanpa nol di depan, `tag` hanya `python` atau `web`, `date` berformat `YYYY-MM-DD` dan berisi tanggal pengerjaan yang sebenarnya (tanggal pada contoh di atas hanya ilustrasi), dan `description` paling banyak dua kalimat tanpa kata superlatif.
 
 ## 6. Templat berkas
 
