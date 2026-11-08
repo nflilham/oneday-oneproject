@@ -1,0 +1,13 @@
+# Instruksi agent, tidak perlu ikut versi publik
+AGENTS.md
+
+# Spesifikasi projek, disimpan lokal saja
+**/SPEC.md
+SPEC.md
+
+# Data lokal hasil menjalankan program
+**/data.json
+
+# Cache Python
+__pycache__/
+*.py[cod]
