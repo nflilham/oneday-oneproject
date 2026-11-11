@@ -1,0 +1,268 @@
+/* Warna dipakai lewat variabel agar mudah diganti di satu tempat */
+:root {
+  --krem: #faf3e8;
+  --krem-tua: #f0e2cc;
+  --kopi: #3b2314;
+  --kopi-muda: #6b4a35;
+  --terakota: #b85d19;
+  --putih: #ffffff;
+  --garis: #8a6a4d;
+  --tinta-pudar: #e8d3b0;
+  --huruf-judul: Georgia, "Times New Roman", serif;
+}
+
+/* Reset sederhana: ukuran elemen sudah termasuk padding dan border */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  background: var(--krem);
+  color: var(--kopi);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--huruf-judul);
+  line-height: 1.15;
+}
+
+/* ---------- Header ---------- */
+
+.info-warung {
+  background: var(--kopi);
+  color: var(--krem);
+}
+
+/* Strip tenda warung: motif identitas halaman */
+.info-warung::after {
+  content: "";
+  display: block;
+  height: 14px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--terakota) 0 28px,
+    var(--krem) 28px 56px
+  );
+}
+
+.isi-header {
+  display: grid;
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 16px 36px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2.25rem, 8vw, 4rem);
+}
+
+.slogan {
+  margin: 0 0 16px;
+  max-width: 28ch;
+  font-size: 1.2rem;
+}
+
+.alamat {
+  margin: 0;
+  color: var(--tinta-pudar);
+}
+
+/* Kartu jam buka: nama hari di kiri, jam di kanan */
+.kartu-jam {
+  padding: 20px;
+  background: var(--krem);
+  color: var(--kopi);
+  border-radius: 8px;
+}
+
+.kartu-jam h2 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+
+.jam-buka {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.jam-buka li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--garis);
+}
+
+.jam-buka li:last-child {
+  border-bottom: 0;
+}
+
+/* ---------- Menu ---------- */
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 16px 56px;
+}
+
+.judul-menu {
+  margin: 0 0 16px;
+  font-size: 2rem;
+}
+
+/* Tombol filter */
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.tombol-filter {
+  min-height: 44px;
+  padding: 0 22px;
+  font: inherit;
+  font-weight: 600;
+  color: var(--kopi);
+  background: var(--putih);
+  border: 1.5px solid var(--garis);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 150ms, color 150ms;
+}
+
+.tombol-filter:hover {
+  background: var(--krem-tua);
+}
+
+/* Tombol yang sedang terpilih */
+.tombol-filter.aktif {
+  background: var(--terakota);
+  border-color: var(--terakota);
+  color: var(--putih);
+}
+
+.tombol-filter:focus-visible {
+  outline: 3px solid var(--kopi);
+  outline-offset: 2px;
+}
+
+/* Grid menu: 1 kolom di ponsel, 2 kolom di tablet, 3 kolom di desktop */
+.daftar-menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.kartu-menu {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--putih);
+  border: 1px solid var(--garis);
+  border-radius: 8px;
+  transition: border-color 150ms;
+}
+
+.kartu-menu:hover {
+  border-color: var(--kopi);
+}
+
+/* Area ilustrasi: warna latar dibedakan menurut kategori */
+.gambar-menu {
+  aspect-ratio: 5 / 3;
+  border-bottom: 1px solid var(--garis);
+}
+
+.gambar-makanan {
+  background: #f4e3c5;
+}
+
+.gambar-minuman {
+  background: #f6dccb;
+}
+
+.gambar-menu svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.isi-kartu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+}
+
+/* Baris nama menu, garis titik penghubung, dan harga */
+.baris-nama {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.baris-nama h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.titik {
+  flex: 1;
+  min-width: 12px;
+  border-bottom: 2px dotted var(--garis);
+}
+
+.harga {
+  margin: 0;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.deskripsi {
+  margin: 0;
+  color: var(--kopi-muda);
+}
+
+.pesan-kosong {
+  grid-column: 1 / -1;
+  padding: 24px 0;
+  color: var(--kopi-muda);
+}
+
+@media (min-width: 600px) {
+  .daftar-menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 720px) {
+  .isi-header {
+    grid-template-columns: 1.5fr 1fr;
+    align-items: end;
+    gap: 48px;
+    padding: 56px 16px 48px;
+  }
+}
+
+@media (min-width: 960px) {
+  .daftar-menu {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Hormati pengguna yang mematikan animasi di sistemnya */
+@media (prefers-reduced-motion: reduce) {
+  .tombol-filter,
+  .kartu-menu {
+    transition: none;
+  }
+}

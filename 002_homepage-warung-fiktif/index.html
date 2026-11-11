@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warung Sedap Rasa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Bagian info warung: nama, slogan, alamat, dan jam buka -->
+  <header class="info-warung">
+    <div class="isi-header">
+      <div class="identitas">
+        <h1>Warung Sedap Rasa</h1>
+        <p class="slogan">Cita rasa rumahan yang lezat, hangat, dan ramah di kantong.</p>
+        <p class="alamat">Jl. Melati No. 12, Kota Contoh</p>
+      </div>
+
+      <section class="kartu-jam" aria-labelledby="judul-jam">
+        <h2 id="judul-jam">Jam buka</h2>
+        <ul class="jam-buka">
+          <li><span>Senin - Jumat</span><span>08.00 - 21.00</span></li>
+          <li><span>Sabtu - Minggu</span><span>07.00 - 22.00</span></li>
+        </ul>
+      </section>
+    </div>
+  </header>
+
+  <main>
+    <h2 class="judul-menu">Daftar menu</h2>
+
+    <!-- Tombol filter; tombol "Semua" terpilih saat halaman dibuka -->
+    <div class="filter" id="filter-menu">
+      <button type="button" class="tombol-filter aktif" data-kategori="semua" aria-pressed="true">Semua</button>
+      <button type="button" class="tombol-filter" data-kategori="makanan" aria-pressed="false">Makanan</button>
+      <button type="button" class="tombol-filter" data-kategori="minuman" aria-pressed="false">Minuman</button>
+    </div>
+
+    <!-- Area menu: diisi oleh script.js -->
+    <div class="daftar-menu" id="daftar-menu"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
