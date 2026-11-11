@@ -28,3 +28,4 @@ Tombol filter yang aktif ditandai dengan perubahan warna latar. Bila data menu p
 ## Catatan pelajaran
 
 Membangun web statis interaktif tanpa library memperdalam pemahaman manipulasi DOM dan logika array dasar. Penggunaan CSS Grid modern memudahkan pembuatan tampilan responsif yang konsisten di berbagai ukuran layar.
+

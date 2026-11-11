@@ -20,6 +20,7 @@ Tujuan utamanya bukan sekadar menambah karya, tetapi berlatih menulis spesifikas
 | No | Projek | Fokus | Ringkasan | Status |
 |:---:|:---|:---:|:---|:---:|
 | 001 | [001_kalkulator-ipk](./001_kalkulator-ipk) | Python | Program terminal berbasis menu dengan penyimpanan JSON untuk menghitung IPK | Lolos |
+| 002 | [002_homepage-warung-fiktif](./002_homepage-warung-fiktif) | Web | Halaman web statis dengan daftar menu dinamis JavaScript vanilla dan filter kategori | Lolos |
 
 ## Lingkungan dan standar teknis
 
