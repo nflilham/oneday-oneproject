@@ -1,5 +1,6 @@
-# Instruksi agent, tidak perlu ikut versi publik
+# Instruksi dan skill agent, tidak perlu ikut versi publik
 AGENTS.md
+.agents/
 
 # Spesifikasi projek, disimpan lokal saja
 **/SPEC.md

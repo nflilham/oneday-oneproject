@@ -8,8 +8,8 @@ Dikelola oleh **Naufal Ilham Fauzan** (Pendidikan Multimedia, Universitas Pendid
 
 Setiap projek melewati empat tahap yang tidak boleh dilompati:
 
-1. **Spesifikasi.** Menentukan tujuan, batasan teknologi, kriteria selesai, dan ruang lingkup secara presisi sebelum kode ditulis.
-2. **Eksekusi.** Agent AI mengerjakan program berdasarkan `SPEC.md`, lalu menjalankannya dan mencocokkan hasil dengan kriteria selesai.
+1. **Spesifikasi awal.** Menentukan tujuan, batasan teknologi, kriteria selesai, dan ruang lingkup secara presisi sebagai acuan awal sebelum kode ditulis.
+2. **Eksekusi dan eksplorasi.** Agent AI mengerjakan iterasi pertama berdasarkan `SPEC.md`, lalu menjalankannya dan mencocokkan hasil dengan kriteria selesai. Ide mendadak dan perubahan arah selama pengerjaan boleh dieksplorasi tanpa menulis ulang `SPEC.md`.
 3. **Review.** Pemilik repo menguji keluaran secara mandiri, memeriksa kondisi batas, dan mencatat hasil evaluasi di `REVIEW.md`.
 4. **Dokumentasi.** Menulis panduan penggunaan dan menyiapkan entri untuk web portofolio.
 
