@@ -31,6 +31,7 @@ Setiap projek dijalankan melalui empat tahap berurutan:
 | `002` | [002_homepage-warung-fiktif](./002_homepage-warung-fiktif) | Web | Halaman web statis dengan daftar menu dinamis JavaScript vanilla dan filter kategori | Lolos |
 | `003` | [003_kalkulator-modular](./003_kalkulator-modular) | Python | Kalkulator terminal dengan struktur paket modular dan evaluasi prioritas operator | Menunggu review |
 | `004` | [004_forum-post-komentar](./004_forum-post-komentar) | Python | Aplikasi CLI post dan komentar bermodul dengan penyimpanan JSON, perintah `batal`, dan 13 unit test `unittest` | Lolos |
+| `005` | [005_forum-post-komentar-gui](./005_forum-post-komentar-gui) | Python | Aplikasi desktop GUI CustomTkinter untuk membuat, mencari, mengomentari, dan menghapus post dengan penyimpanan JSON | Lolos |
 
 ---
 
@@ -42,7 +43,7 @@ oneday-oneproject/
 ├── 002_homepage-warung-fiktif/    # Projek 002: homepage statis dengan filter kategori
 ├── 003_kalkulator-modular/        # Projek 003: kalkulator modular (iterasi awal)
 ├── 004_forum-post-komentar/       # Projek 004: aplikasi post & komentar CLI + unittest
-├── IDE.md                         # Bank ide projek harian
+├── 005_forum-post-komentar-gui/   # Projek 005: forum post & komentar GUI CustomTkinter
 ├── .gitignore                     # Aturan pengecualian file lokal dan cache
 └── README.md                      # Dokumentasi utama repositori
 ```
