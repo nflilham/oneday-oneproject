@@ -1,6 +1,7 @@
 # Instruksi dan skill agent, tidak perlu ikut versi publik
 AGENTS.md
 .agents/
+skills-lock.json
 
 # Spesifikasi projek, disimpan lokal saja
 **/SPEC.md
@@ -13,6 +14,8 @@ docs/
 **/data.json
 **/data_forum.json
 
-# Cache Python
+# Lingkungan virtual dan cache Python
+.venv/
+**/.venv/
 __pycache__/
 *.py[cod]
