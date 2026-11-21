@@ -11,6 +11,7 @@ docs/
 
 # Data lokal hasil menjalankan program
 **/data.json
+**/data_forum.json
 
 # Cache Python
 __pycache__/
